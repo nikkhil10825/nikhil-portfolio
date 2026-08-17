@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects | Nikhil - Video Editor & Motion Designer</title>
+<meta name="description" content="Explore all video editing, motion design, vertical short-form reels, and AI video projects by Nikhil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">NIKHIL.</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-primary header-cta">Let's Work Together <span aria-hidden="true">&rarr;</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- Projects Hero -->
+  <section class="wrap projects-hero">
+    <div class="breadcrumb">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+    <p class="eyebrow eyebrow--accent">Portfolio Showcase</p>
+    <h1 class="page-title">All Projects</h1>
+    <p class="page-subtitle">Browse through my complete library of short-form reels, long-form edits, motion design, and AI video productions.</p>
+  </section>
+
+  <!-- Filter & Search Section -->
+  <section class="wrap projects-controls-wrap">
+    <div class="controls-bar">
+      <!-- Search Input -->
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="projectSearch" placeholder="Search by title, tool (Ae, Pr), or style..." aria-label="Search projects">
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-category="all">All (<span id="cnt-all">0</span>)</button>
+        <button class="filter-btn" data-category="short-form">Short Form 9:16 (<span id="cnt-short-form">0</span>)</button>
+        <button class="filter-btn" data-category="long-form">Long Form 16:9 (<span id="cnt-long-form">0</span>)</button>
+        <button class="filter-btn" data-category="motion-graphics">Motion Graphics (<span id="cnt-motion-graphics">0</span>)</button>
+        <button class="filter-btn" data-category="ai-video">AI Video (<span id="cnt-ai-video">0</span>)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Projects Grid -->
+  <section class="wrap projects-section">
+    <div class="project-grid" id="projectsGrid">
+      <!-- Cards injected dynamically via projects.js -->
+    </div>
+
+    <!-- Empty State -->
+    <div class="no-results hidden" id="noResults">
+      <h3>No matching projects found</h3>
+      <p>Try adjusting your search terms or filter selection.</p>
+      <button class="btn btn-outline" id="resetFilters">Reset Filters</button>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="connect wrap">
+    <div>
+      <p class="eyebrow eyebrow--accent">Let's Connect</p>
+      <h2>Have a custom video project?<br>Let me handle the visual magic.</h2>
+    </div>
+    <a href="mailto:nikhil10825@gmail.com" class="btn btn-primary">Let's Work Together <span aria-hidden="true">&rarr;</span></a>
+  </section>
+
+</main>
+
+<!-- Video Detail Lightbox Modal -->
+<div class="modal-backdrop hidden" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+    <div class="modal-video-wrap" id="modalVideoWrap">
+      <!-- Iframe injected via JS -->
+    </div>
+    <div class="modal-body">
+      <div class="modal-header-row">
+        <h2 id="modalTitle">Project Title</h2>
+        <span class="badge" id="modalBadge">Category</span>
+      </div>
+      <div class="modal-tools" id="modalTools">
+        <!-- Tools badges -->
+      </div>
+      <p class="modal-description" id="modalDesc">Project description goes here.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <p class="logo">NIKHIL.</p>
+      <p class="footer-role">Video Editor | Motion Designer | Creative Director</p>
+      <p class="footer-desc">Crafting visual stories that connect.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>Short Form Content</li>
+        <li>Long Form Content</li>
+        <li>Motion Graphics</li>
+        <li>AI Video Generating &amp; Editing</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Let's Connect</h4>
+      <ul class="footer-contact">
+        <li><a href="mailto:nikhil10825@gmail.com">nikhil10825@gmail.com</a></li>
+        <li><a href="tel:+918426828965">+91 84268 28965</a></li>
+        <li>Jaipur, Rajasthan, India</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="year"></span> Nikhil. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="projects-db.js"></script>
+<script src="projects.js"></script>
+</body>
+</html>
