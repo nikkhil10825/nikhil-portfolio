@@ -1072,6 +1072,10 @@ p{margin:0;}
   .project-card--9-16 {
     grid-column: span 1 !important;
   }
+  .journey {
+    padding-top: clamp(60px, 12vw, 84px);
+    padding-bottom: 60px;
+  }
   .connect {
     flex-direction: column;
     align-items: flex-start;
