@@ -5,7 +5,7 @@
  */
 
 const projectsData = [
-  // --- 16:9 Long Form Projects (Placed First) ---
+  // --- 16:9 Long Form Projects ---
   {
     id: 1,
     title: "Options Buyer",
@@ -32,56 +32,20 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Gym Promo Edit",
+    title: "Ford Mustang Speedramp VFX",
     category: "long-form",
     categoryLabel: "Long Form 16:9",
-    vimeoUrl: "https://player.vimeo.com/video/1129979338?title=0&byline=0&portrait=0",
+    vimeoUrl: "https://player.vimeo.com/video/1129979338?h=da58b5fac9&title=0&byline=0&portrait=0",
     aspectRatio: "16-9",
-    tools: ["Adobe Premiere Pro", "After Effects", "Color Grading"],
-    client: "FitNation Gym",
+    tools: ["Adobe Premiere Pro", "After Effects", "VFX", "Speed Ramping"],
+    client: "Ford Mustang",
     year: "2025",
-    description: "High-energy promotional commercial for a premium fitness brand. Features rhythmic editing, bass-drop audio sync, cinematic speed ramps, and bold graphic callouts."
-  },
-  {
-    id: 4,
-    title: "Real Estate Walkthrough",
-    category: "long-form",
-    categoryLabel: "Long Form 16:9",
-    vimeoUrl: "https://player.vimeo.com/video/1129979338?title=0&byline=0&portrait=0",
-    aspectRatio: "16-9",
-    tools: ["Adobe Premiere Pro", "Photoshop", "Sound Design"],
-    client: "Skyline Properties",
-    year: "2025",
-    description: "Architectural and interior luxury real estate film showcasing property highlights with elegant transitions, ambient music design, and pristine color correction."
-  },
-  {
-    id: 5,
-    title: "AI Video Generation & VFX",
-    category: "ai-video",
-    categoryLabel: "AI Video",
-    vimeoUrl: "https://player.vimeo.com/video/1129979338?title=0&byline=0&portrait=0",
-    aspectRatio: "16-9",
-    tools: ["Midjourney", "Runway Gen-2", "After Effects"],
-    client: "Experimental",
-    year: "2026",
-    description: "Experimental creative video leveraging generative AI tools for concept generation, prompt styling, camera motion synthesis, and compositing."
-  },
-  {
-    id: 6,
-    title: "Podcast Highlight Cut",
-    category: "long-form",
-    categoryLabel: "Long Form 16:9",
-    vimeoUrl: "https://player.vimeo.com/video/1129979338?title=0&byline=0&portrait=0",
-    aspectRatio: "16-9",
-    tools: ["Adobe Premiere Pro", "Adobe Audition"],
-    client: "Tech Talk Podcast",
-    year: "2025",
-    description: "Multi-cam interview and podcast episode editing with speaker tracking, custom lower thirds, intro/outro animations, and sound enhancement."
+    description: "High-octane VFX-driven speed ramp edit featuring a Ford Mustang with dynamic camera transitions, cinematic grading, and impactful visual effects."
   },
 
   // --- 9:16 Vertical & Short Form Projects ---
   {
-    id: 7,
+    id: 4,
     title: "Campa - AI Generated",
     category: "ai-video",
     categoryLabel: "AI Video",
@@ -93,7 +57,7 @@ const projectsData = [
     description: "Creative AI-generated vertical video ad combining AI synthesis, custom visual effects, motion graphics, and high-retention pacing."
   },
   {
-    id: 8,
+    id: 5,
     title: "Options Buyer - Reel",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -105,7 +69,7 @@ const projectsData = [
     description: "Engaging vertical financial reel with animated subtitles, kinetic graphical callouts, sound design, and retention-focused pacing."
   },
   {
-    id: 9,
+    id: 6,
     title: "Uplearn",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -117,69 +81,7 @@ const projectsData = [
     description: "Dynamic educational and promotional vertical short-form reel featuring sleek typography, smooth animations, and high audience retention pacing."
   },
   {
-    id: 10,
-    title: "Product Motion Ad",
-    category: "short-form",
-    categoryLabel: "Short Form 9:16",
-    vimeoUrl: "https://player.vimeo.com/video/1021836644?title=0&byline=0&portrait=0",
-    aspectRatio: "9-16",
-    tools: ["After Effects", "Figma", "3D Motion"],
-    client: "Aura Apparel",
-    year: "2026",
-    description: "Fast-paced vertical mobile video ad designed for Instagram Reels & TikTok campaigns. Engineered for high scroll-stopping retention and conversion."
-  },
-  {
-    id: 11,
-    title: "Brand Story Film",
-    category: "motion-graphics",
-    categoryLabel: "Motion Graphics",
-    vimeoUrl: "https://player.vimeo.com/video/1021836644?title=0&byline=0&portrait=0",
-    aspectRatio: "9-16",
-    tools: ["After Effects", "Photoshop", "Typography"],
-    client: "Luminary Studios",
-    year: "2025",
-    description: "Branded storytelling piece combining kinetic typography, custom 2D motion graphics, and sleek brand color palettes."
-  },
-  {
-    id: 12,
-    title: "Social Media Reel",
-    category: "short-form",
-    categoryLabel: "Short Form 9:16",
-    vimeoUrl: "https://player.vimeo.com/video/1021836644?title=0&byline=0&portrait=0",
-    aspectRatio: "9-16",
-    tools: ["Adobe Premiere Pro", "CapCut Pro", "Auto-Captions"],
-    client: "Creator Network",
-    year: "2026",
-    description: "Viral creator reel formatted for short-form retention with dynamic animated captions, sound effects, pop-up graphics, and pacing control."
-  },
-  {
-    id: 13,
-    title: "Kinetic Typography Reel",
-    category: "motion-graphics",
-    categoryLabel: "Motion Graphics",
-    vimeoUrl: "https://player.vimeo.com/video/1021836644?title=0&byline=0&portrait=0",
-    aspectRatio: "9-16",
-    tools: ["After Effects", "Illustrator"],
-    client: "SoundPulse Fest",
-    year: "2025",
-    description: "Rhythmic motion typography animation synchronizing bold statement text with punchy audio beats for social media announcement videos."
-  },
-
-  // --- Batch Added: New Vimeo Projects ---
-  {
-    id: 14,
-    title: "Ford Mustang Speedramp VFX",
-    category: "long-form",
-    categoryLabel: "Long Form 16:9",
-    vimeoUrl: "https://player.vimeo.com/video/1129979338?h=da58b5fac9&title=0&byline=0&portrait=0",
-    aspectRatio: "16-9",
-    tools: ["Adobe Premiere Pro", "After Effects", "VFX", "Speed Ramping"],
-    client: "Ford Mustang",
-    year: "2025",
-    description: "High-octane VFX-driven speed ramp edit featuring a Ford Mustang with dynamic camera transitions, cinematic grading, and impactful visual effects."
-  },
-  {
-    id: 15,
+    id: 7,
     title: "Protien Red",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -191,7 +93,7 @@ const projectsData = [
     description: "Punchy vertical product promo with bold color grading, fast-paced cuts, and attention-grabbing motion design."
   },
   {
-    id: 16,
+    id: 8,
     title: "NutriStation Diwali Offer",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -203,7 +105,7 @@ const projectsData = [
     description: "Festive Diwali promotional reel for a nutrition brand with vibrant animations, offer callouts, and seasonal visual storytelling."
   },
   {
-    id: 17,
+    id: 9,
     title: "Muftlo",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -215,7 +117,7 @@ const projectsData = [
     description: "Sleek real estate advertisement reel with smooth transitions, property highlights, and polished visual branding."
   },
   {
-    id: 18,
+    id: 10,
     title: "Kontent",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -227,7 +129,7 @@ const projectsData = [
     description: "Engaging short-form vertical reel with dynamic pacing, bold typography, and high-retention editing techniques."
   },
   {
-    id: 19,
+    id: 11,
     title: "Gym Edit",
     category: "short-form",
     categoryLabel: "Short Form 9:16",
@@ -237,6 +139,18 @@ const projectsData = [
     client: "Gym",
     year: "2026",
     description: "High-energy gym workout reel with bass-drop synced cuts, speed ramps, and motivational visual storytelling."
+  },
+  {
+    id: 12,
+    title: "Kinetic Typography Reel",
+    category: "motion-graphics",
+    categoryLabel: "Motion Graphics",
+    vimeoUrl: "https://player.vimeo.com/video/1021836644?title=0&byline=0&portrait=0",
+    aspectRatio: "9-16",
+    tools: ["After Effects", "Illustrator"],
+    client: "SoundPulse Fest",
+    year: "2025",
+    description: "Rhythmic motion typography animation synchronizing bold statement text with punchy audio beats for social media announcement videos."
   }
 ];
 
