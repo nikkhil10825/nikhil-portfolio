@@ -76,10 +76,16 @@ if (typewriterSkill && !window.matchMedia('(prefers-reduced-motion: reduce)').ma
   typeSkill();
 }
 
-// Give the portrait a subtle depth shift while the hero scrolls through view
+// Give the portrait a subtle depth shift while the hero scrolls through view (desktop only)
 const heroSection = document.querySelector('.hero-section');
 if (heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const updateHeroParallax = () => {
+    if (window.innerWidth <= 1100) {
+      heroSection.style.removeProperty('--portrait-scroll');
+      heroSection.style.removeProperty('--hero-copy-scroll');
+      heroSection.style.removeProperty('--hero-background-scroll');
+      return;
+    }
     const heroBounds = heroSection.getBoundingClientRect();
     const shift = Math.max(-26, Math.min(26, -heroBounds.top * 0.08));
     heroSection.style.setProperty('--portrait-scroll', `${shift}px`);
@@ -88,6 +94,7 @@ if (heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
   };
 
   window.addEventListener('scroll', updateHeroParallax, { passive: true });
+  window.addEventListener('resize', updateHeroParallax, { passive: true });
   updateHeroParallax();
 }
 
