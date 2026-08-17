@@ -127,3 +127,48 @@ if (canUseCursorGlow) {
     document.body.classList.remove('cursor-glow-active');
   });
 }
+
+// Contact Information Modal
+const contactModal = document.getElementById('contactModal');
+const contactModalClose = document.getElementById('contactModalClose');
+const contactTriggers = document.querySelectorAll('.contact-trigger');
+
+function openContactModal() {
+  if (contactModal) {
+    contactModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeContactModal() {
+  if (contactModal) {
+    contactModal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+}
+
+contactTriggers.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openContactModal();
+  });
+});
+
+if (contactModalClose) {
+  contactModalClose.addEventListener('click', closeContactModal);
+}
+
+if (contactModal) {
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      closeContactModal();
+    }
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && contactModal && !contactModal.classList.contains('hidden')) {
+    closeContactModal();
+  }
+});
+

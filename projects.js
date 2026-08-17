@@ -201,9 +201,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Contact Information Modal Handlers
+  const contactModal = document.getElementById('contactModal');
+  const contactModalClose = document.getElementById('contactModalClose');
+  const contactTriggers = document.querySelectorAll('.contact-trigger');
+
+  function openContactModal() {
+    if (contactModal) {
+      contactModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeContactModal() {
+    if (contactModal) {
+      contactModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  contactTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openContactModal();
+    });
+  });
+
+  if (contactModalClose) {
+    contactModalClose.addEventListener('click', closeContactModal);
+  }
+
+  if (contactModal) {
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        closeContactModal();
+      }
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
+    if (e.key === 'Escape' && contactModal && !contactModal.classList.contains('hidden')) {
+      closeContactModal();
     }
   });
 
@@ -211,3 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCounts();
   renderProjects();
 });
+
