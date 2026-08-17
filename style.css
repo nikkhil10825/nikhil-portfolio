@@ -235,7 +235,7 @@ p{margin:0;}
   to{transform:translate3d(10px,-14px,0) rotate(calc(var(--icon-rotate,0deg) + 5deg));}
 }
 .float-icon--hero-ae{left:39%;top:24%;width:clamp(46px,4.5vw,64px);opacity:.55;--icon-rotate:-10deg;}
-.float-icon--hero-pr{left:49%;bottom:21%;width:clamp(46px,4.5vw,64px);opacity:.55;--icon-rotate:12deg;}
+.float-icon--hero-pr{left:49%;bottom:20%;width:clamp(58px, 5.6vw, 80px);opacity:.62;--icon-rotate:12deg;}
 .float-icon--hero-production{right:6%;top:14%;width:clamp(50px,5.2vw,78px);opacity:.4;--icon-rotate:13deg;}
 .float-icon--hero-video{right:24%;bottom:10%;width:clamp(48px,5vw,76px);opacity:.38;--icon-rotate:-12deg;}
 .float-icon--journey-hash{right:8%;top:18%;--icon-rotate:12deg;}
