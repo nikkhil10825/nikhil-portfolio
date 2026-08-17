@@ -80,7 +80,7 @@ if (typewriterSkill && !window.matchMedia('(prefers-reduced-motion: reduce)').ma
 const heroSection = document.querySelector('.hero-section');
 if (heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const updateHeroParallax = () => {
-    if (window.innerWidth <= 1100) {
+    if (window.innerWidth <= 980) {
       heroSection.style.removeProperty('--portrait-scroll');
       heroSection.style.removeProperty('--hero-copy-scroll');
       heroSection.style.removeProperty('--hero-background-scroll');
