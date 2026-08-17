@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Elements
-  const projectsGrid = document.getElementById('projectsGrid');
+  const landscapeGroup = document.getElementById('landscapeGroup');
+  const portraitGroup = document.getElementById('portraitGroup');
+  const landscapeGrid = document.getElementById('landscapeGrid');
+  const portraitGrid = document.getElementById('portraitGrid');
+  const landscapeCount = document.getElementById('landscapeCount');
+  const portraitCount = document.getElementById('portraitCount');
+
   const searchInput = document.getElementById('projectSearch');
   const filterTabs = document.getElementById('filterTabs');
   const noResults = document.getElementById('noResults');
@@ -52,29 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 5. Render Projects Grid
-  function renderProjects() {
-    const filtered = data.filter(project => {
-      const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
-      const q = searchQuery.toLowerCase().trim();
-      const matchesSearch = !q || 
-        project.title.toLowerCase().includes(q) ||
-        project.categoryLabel.toLowerCase().includes(q) ||
-        project.description.toLowerCase().includes(q) ||
-        project.tools.some(t => t.toLowerCase().includes(q));
-
-      return matchesCategory && matchesSearch;
-    });
-
-    if (filtered.length === 0) {
-      projectsGrid.style.display = 'none';
-      noResults.classList.remove('hidden');
-    } else {
-      projectsGrid.style.display = 'grid';
-      noResults.classList.add('hidden');
-    }
-
-    projectsGrid.innerHTML = filtered.map(project => `
+  // Helper to generate project card HTML
+  function createCardHTML(project) {
+    return `
       <article class="project-card project-card--${project.aspectRatio}" data-id="${project.id}">
         <div class="project-thumb">
           <iframe src="${project.vimeoUrl}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${project.title}"></iframe>
@@ -90,7 +76,56 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="btn-card-details" onclick="openModal(${project.id})">View Details &rarr;</button>
         </div>
       </article>
-    `).join('');
+    `;
+  }
+
+  // 5. Render Projects Separated by Landscape and Portrait
+  function renderProjects() {
+    const filtered = data.filter(project => {
+      const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
+      const q = searchQuery.toLowerCase().trim();
+      const matchesSearch = !q || 
+        project.title.toLowerCase().includes(q) ||
+        project.categoryLabel.toLowerCase().includes(q) ||
+        project.description.toLowerCase().includes(q) ||
+        project.tools.some(t => t.toLowerCase().includes(q));
+
+      return matchesCategory && matchesSearch;
+    });
+
+    if (filtered.length === 0) {
+      if (landscapeGroup) landscapeGroup.style.display = 'none';
+      if (portraitGroup) portraitGroup.style.display = 'none';
+      noResults.classList.remove('hidden');
+      return;
+    }
+
+    noResults.classList.add('hidden');
+
+    const landscapeList = filtered.filter(p => p.aspectRatio === '16-9');
+    const portraitList = filtered.filter(p => p.aspectRatio === '9-16');
+
+    // Landscape section
+    if (landscapeGroup && landscapeGrid) {
+      if (landscapeList.length === 0) {
+        landscapeGroup.style.display = 'none';
+      } else {
+        landscapeGroup.style.display = 'block';
+        landscapeGrid.innerHTML = landscapeList.map(createCardHTML).join('');
+        if (landscapeCount) landscapeCount.textContent = `(${landscapeList.length})`;
+      }
+    }
+
+    // Portrait section
+    if (portraitGroup && portraitGrid) {
+      if (portraitList.length === 0) {
+        portraitGroup.style.display = 'none';
+      } else {
+        portraitGroup.style.display = 'block';
+        portraitGrid.innerHTML = portraitList.map(createCardHTML).join('');
+        if (portraitCount) portraitCount.textContent = `(${portraitList.length})`;
+      }
+    }
   }
 
   // 6. Filter Tab Click Event
