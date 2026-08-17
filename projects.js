@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return `
       <article class="project-card project-card--${project.aspectRatio}" data-id="${project.id}">
         <div class="project-thumb">
-          <iframe src="${project.vimeoUrl}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${project.title}"></iframe>
+          <iframe src="${project.vimeoUrl}" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${project.title}"></iframe>
         </div>
         <div class="project-info">
           <div class="project-info-header">
@@ -176,11 +176,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Inject video iframe inside modal
     modalVideoWrap.className = `modal-video-wrap modal-video-wrap--${project.aspectRatio}`;
-    const autoplayUrl = project.vimeoUrl.includes('vimeo.com') 
+    const isEmbeddable = project.vimeoUrl.includes('vimeo.com') || project.vimeoUrl.includes('youtube.com');
+    const autoplayUrl = isEmbeddable
       ? (project.vimeoUrl.includes('?') ? `${project.vimeoUrl}&autoplay=1` : `${project.vimeoUrl}?autoplay=1`)
       : project.vimeoUrl;
     modalVideoWrap.innerHTML = `
-      <iframe src="${autoplayUrl}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${project.title}"></iframe>
+      <iframe src="${autoplayUrl}" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${project.title}"></iframe>
     `;
 
     modal.classList.remove('hidden');
