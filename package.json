@@ -1,0 +1,13 @@
+{
+  "name": "nikhil-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Nikhil - Video Editor & Motion Designer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node .codex-static-server.js",
+    "push": "node push.js"
+  },
+  "dependencies": {
+    "isomorphic-git": "^1.27.0"
+  }
+}
