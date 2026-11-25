@@ -8,6 +8,18 @@ const projectsData = [
   // --- 16:9 Long Form Projects ---
   {
     id: 1,
+    title: "Abu Dhabi Vlog",
+    category: "long-form",
+    categoryLabel: "Long Form 16:9",
+    vimeoUrl: "https://www.youtube.com/embed/XzFN8jBE-q4",
+    aspectRatio: "16-9",
+    tools: ["Adobe Premiere Pro", "After Effects", "Sound Design", "Color Grading"],
+    client: "Travel Vlog",
+    year: "2026",
+    description: "Cinematic long-form travel vlog edit featuring dynamic transitions, sound design, color grading, and immersive visual storytelling in Abu Dhabi."
+  },
+  {
+    id: 16,
     title: "Options Buyer",
     category: "long-form",
     categoryLabel: "Long Form 16:9",
